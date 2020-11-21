@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <title>Lite pwgen</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>PWGEN</h1>
+<!--      <form>-->
+        <div class="setup">
+          <div class="setupField">
+            <label>Length</label>
+            <input id="inputLength" placeholder="16" value="16" />
+          </div>
+          <div class="setupField">
+            <label>Count</label>
+            <input id="inputCount" placeholder="4" value="4"/>
+          </div>
+        </div>
+        <button id="btnGenerate">generate</button>
+        <div id="result"/>
+<!--      </form>-->
+    </div>
+    <script type="module" src="main.js"></script>
+    <script type="module" src="utils.js"></script>
+  </body>
+</html>
