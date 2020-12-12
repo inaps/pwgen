@@ -22,7 +22,12 @@ const generate = () => {
   const count = document.querySelector("#inputCount").value;
   const passwords = getPasswords(getValue(length, 16), getValue(count, 4));
 
-  result.innerHTML = passwords.map(item => `<div class="password">${item}</div>`).join("")
+  result.innerHTML = passwords
+    .map(item =>
+      `<div class="password">
+          <span>${item}</span>
+        </div>`)
+    .join("")
 }
 
 const getPasswords = (length, count) => {
@@ -51,4 +56,10 @@ const getPassword = (length) => {
   return result
 }
 
-document.querySelector("#btnGenerate").addEventListener('click', generate)
+const init = () => {
+  document.querySelector("#btnGenerate").addEventListener('click', generate);
+  generate();
+}
+
+init();
+
