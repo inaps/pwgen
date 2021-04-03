@@ -20,7 +20,7 @@ const generate = () => {
   const result = document.querySelector("#result");
   const length = document.querySelector("#inputLength").value;
   const count = document.querySelector("#inputCount").value;
-  const passwords = getPasswords(getValue(length, 16), getValue(count, 4));
+  const passwords = getPasswords(getValue(length, 20), getValue(count, 1));
 
   result.innerHTML = passwords
     .map(item =>
