@@ -2,8 +2,27 @@ export function getRandomChar(charset) {
     return charset[getRandomInt(charset.length)];
 }
 
+function reduceTo(value, max) {
+    function reduce(value) {
+        if (value > max) {
+            return reduce(value * Math.random())
+        }
+
+        return value;
+    }
+
+    return reduce(value)
+}
+
+export function getCryptoRandom() {
+    return window.crypto.getRandomValues(new Uint8Array(1))[0];
+}
+
 export function getRandomInt(max) {
-    return Math.floor(Math.random() * Math.floor(max));
+    const randomInt = getCryptoRandom(max)
+    const randomIntReduced = reduceTo(randomInt, max)
+
+    return Math.floor(randomIntReduced);
 }
 
 export function replaceAt(src, char, index) {
