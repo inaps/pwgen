@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="index.css">
-    <link href="assets/favicon.ico" rel="shortcut icon" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>pwgen</title>
-  </head>
-  <body>
-    <div id="app">
-      <h1>PWGEN</h1>
-        <div class="setup">
-          <div class="setupField">
-            <label>Length</label>
-            <input id="inputLength" placeholder="20" value="20" />
-          </div>
-          <div class="setupField">
-            <label>Count</label>
-            <input id="inputCount" placeholder="1" value="1"/>
-          </div>
-        </div>
-        <button id="btnGenerate">generate</button>
-        <div id="result"/>
-    </div>
-  </body>
-  <script defer type="module" src="main.js"></script>
-  <script defer type="module" src="utils.js"></script>
+<head>
+	<meta charset="UTF-8">
+	<title>Pwgen online</title>
+	<meta name="description" content="Safe generate password online - client side pwgen generator"/>
+	<link rel="stylesheet" href="index.css">
+	<link href="assets/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>pwgen</title>
+</head>
+<body>
+<div id="app">
+	<h1>PWGEN</h1>
+	<div class="description">
+	<p>Safely generate your strong password <br> Pwgen works on the client side, we don't store any data</p>
+	</div>
+	<div class="setup">
+		<div class="setupField">
+			<label for="inputLength">Length</label>
+			<input id="inputLength" placeholder="20" value="20"/>
+		</div>
+		<div class="setupField">
+			<label for="inputCount">Count</label>
+			<input id="inputCount" placeholder="1" value="1"/>
+		</div>
+	</div>
+	<button id="btnGenerate">generate</button>
+	<div id="result"/>
+</div>
+</body>
+<script defer type="module" src="main.js"></script>
+<script defer type="module" src="utils.js"></script>
 </html>
