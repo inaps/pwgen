@@ -1,7 +1,9 @@
 import { getRandomChar, getRandomInt, replaceAt } from "./utils.js";
 
+const VOWELS = ["a", "e", "i", "o", "u", "y"]
+const CONSONANTS = ["b","c","d","f","g","h","k","m","n","p","q","r","s","t","v","w","x","z"]
+
 const SET = {
-  lowercase: "abcdefghijkmnopqrstuvwxyz",
   uppercase: "ABCDEFGHJKLMNOPQRSTUVWXYZ",
   numbers: "0123456789",
 }
@@ -45,8 +47,9 @@ const getPassword = (length) => {
   const number = getRandomChar(SET.numbers)
   const lowercase = [];
 
-  for (let i = 0; i < length; i++) {
-    lowercase.push(getRandomChar(SET.lowercase))
+  for (let i = 0; lowercase.length < length; i++) {
+    lowercase.push(getRandomChar(CONSONANTS))
+    lowercase.push(getRandomChar(VOWELS))
   }
 
   let result = lowercase.join("")
